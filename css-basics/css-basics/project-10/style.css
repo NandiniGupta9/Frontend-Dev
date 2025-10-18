@@ -1,0 +1,75 @@
+body {
+
+
+header {
+position: sticky;
+top: 0;
+background: rgba(0,0,0,0.8);
+color: white;
+padding: 10px;
+}
+
+
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+
+.hero {
+background: url('https://picsum.photos/1200/500') center/cover;
+height: 60vh;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+font-size: 2rem;
+}
+
+
+.about {
+display: flex;
+gap: 20px;
+padding: 40px;
+}
+
+
+.services {
+display: flex;
+justify-content: space-around;
+padding: 40px;
+}
+
+
+.service {
+background: rgba(0,0,0,0.05);
+border: 1px solid #ccc;
+border-radius: 10px;
+padding: 20px;
+transition: 0.3s;
+}
+
+
+.service:hover {
+transform: scale(1.05);
+background: #e0f7fa;
+}
+
+
+.contact form {
+display: flex;
+flex-direction: column;
+width: 300px;
+margin: auto;
+gap: 10px;
+}
+
+
+footer {
+text-align: center;
+background: #333;
+color: white;
+padding: 10px;
+}

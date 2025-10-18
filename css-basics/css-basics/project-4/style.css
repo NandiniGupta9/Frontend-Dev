@@ -1,0 +1,9 @@
+/* css-basics/project-4/style.css */
+body{font-family:Georgia,serif;line-height:1.7;margin:1rem;background:#fbfbfc}
+header h1{font-size:2rem;margin:0 0 1rem}
+.content{max-width:750px;margin:0 auto;padding:1rem;background:#fff;border-radius:6px}
+.content p{margin:1.05rem 0}
+.content p::first-letter{font-size:2.2rem;float:left;margin-right:8px;font-weight:700}
+.content p::first-line{font-weight:700}
+mark{background:#ffd54f;padding:0.05rem 0.15rem;border-radius:2px}
+blockquote{border-left:6px solid #bdbdbd;background:#f4f4f6;padding:1rem;margin:1.2rem 0}

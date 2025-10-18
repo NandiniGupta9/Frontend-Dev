@@ -1,0 +1,49 @@
+body {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+font-family: Arial, sans-serif;
+}
+
+
+.contact-form {
+background: #fff;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+width: 350px;
+}
+
+
+input, textarea {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+
+input:focus, textarea:focus {
+border-color: #007bff;
+outline: none;
+}
+
+
+button {
+width: 100%;
+background: #007bff;
+color: white;
+padding: 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+
+button:hover {
+background: #0056b3;
+}

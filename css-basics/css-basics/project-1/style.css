@@ -1,0 +1,26 @@
+:root{
+  --bg: #0f1724;
+  --text: #e6eef8;
+  --accent: #3ddbd9;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text);}
+.container{max-width:1000px;margin:0 auto;padding:1rem}
+.site-header{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;background:rgba(15,23,36,0.85);backdrop-filter: blur(4px);padding:0.8rem 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.site-name{font-size:1.25rem;margin:0}
+.main-nav a{margin-left:1rem;color:var(--text);text-decoration:none;font-size:0.95rem}
+.main{padding-top:5.2rem}
+.intro{display:flex;gap:2rem;align-items:center}
+.profile-image{width:11rem;height:11rem;border-radius:50%;object-fit:cover;border:6px solid rgba(61,219,217,0.12)}
+.bio{font-size:1rem;line-height:1.6;width:60%;}
+.site-footer{position:fixed;left:0;right:0;bottom:0;background:#071024;padding:0.6rem;text-align:center}
+
+/* Use different units for variety */
+.bio{font-size:1rem /* 1rem */; padding:1em;}
+.profile-image{width:180px /* px */;}
+.main{min-height:60vh /* vh */}
+@media(max-width:700px){
+  .intro{flex-direction:column;text-align:center}
+  .bio{width:100%}
+}
