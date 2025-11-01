@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+.box {
+  background: #eee;
+  padding: 2rem;
+  transition: transform 0.3s;
+}
+
+.box:hover {
+  transform: rotate(2deg);
+  background: #ddd;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
