@@ -1,0 +1,13 @@
+body { text-align: center; font-family: Arial, sans-serif; }
+.cards { display: flex; justify-content: center; gap: 30px; padding: 30px; }
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+}

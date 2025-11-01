@@ -1,0 +1,12 @@
+/* Attribute selector */
+a[href^="https"] { color: green; }
+
+/* Pseudo-classes */
+li:nth-child(2) { color: blue; }
+a:hover { text-decoration: underline; }
+
+/* Pseudo-elements */
+h1::after { content: " 🌟"; }
+
+/* Combinators */
+form > input[type="text"] { border: 2px solid red; }
