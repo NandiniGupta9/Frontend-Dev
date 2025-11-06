@@ -1,0 +1,60 @@
+/* q3.css - Image showcase using Grid; responsive stacking below 700px */
+*{box-sizing:border-box;}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#fff;color:#111;padding:2rem;}
+.gallery{max-width:1100px;margin:0 auto;}
+h1{text-align:center;margin-bottom:1rem;}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+}
+
+/* image card */
+figure{
+  margin:0;
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  cursor:pointer;
+}
+
+figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  transition:transform .3s ease, filter .3s ease;
+  border-radius:12px;
+}
+
+/* overlay created via pseudo-element */
+figure::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0);
+  transition:background .3s ease;
+}
+
+/* hover effect: scale and darken with overlay */
+figure:hover img{
+  transform:scale(1.1);
+}
+figure:hover::after{
+  background:rgba(0,0,0,.28);
+}
+
+/* caption */
+figcaption{
+  padding:.65rem;
+  background:white;
+  text-align:center;
+  font-weight:600;
+}
+
+/* rounded corners + shadow already applied */
+/* Responsive: stack in one column under 700px */
+@media (max-width:700px){
+  .grid{ grid-template-columns:1fr; }
+}

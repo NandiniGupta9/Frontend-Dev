@@ -1,0 +1,63 @@
+/* q2.css - Tooltip demo */
+*{ box-sizing:border-box; }
+body{ margin:0; font-family:system-ui,Segoe UI,Roboto,Arial; background:#f4f7f8; color:#222; }
+.center{ min-height:100vh; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1.25rem; }
+
+.icons{ display:flex; gap:2rem; align-items:center; justify-content:center; }
+
+.tip{
+  position:relative;
+  font-size:2rem;
+  cursor:default;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:64px;
+  height:64px;
+  border-radius:12px;
+  background:white;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  transition:transform .12s ease;
+  outline:none;
+}
+
+/* tooltip element hidden by default */
+.tooltip{
+  position:absolute;
+  bottom:calc(100% + 12px);
+  left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap;
+  padding:.5rem .65rem;
+  border-radius:6px;
+  font-size:.9rem;
+  background:#111;
+  color:white;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .3s ease-in-out, transform .3s ease-in-out;
+  transform-origin:center bottom;
+}
+
+/* arrow */
+.tooltip::after{
+  content:"";
+  position:absolute;
+  top:100%;
+  left:50%;
+  transform:translateX(-50%);
+  border-width:6px;
+  border-style:solid;
+  border-color:#111 transparent transparent transparent;
+}
+
+/* show tooltip on hover AND focus (keyboard accessible)*/
+.tip:hover .tooltip,
+.tip:focus .tooltip{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateX(-50%) translateY(-6px);
+}
+
+/* slight grow on hover */
+.tip:hover{ transform:translateY(-4px); }

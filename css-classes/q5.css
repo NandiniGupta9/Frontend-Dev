@@ -1,0 +1,61 @@
+/* q5.css - Button styles with hover/active/focus and disabled states */
+*{box-sizing:border-box;}
+body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:2rem;background:#f7f9fb;color:#111;}
+
+.btn-row{ display:flex; gap:1rem; align-items:center; justify-content:center; flex-wrap:wrap; }
+
+.btn{
+  padding:.6rem 1rem;
+  border-radius:10px;
+  border:2px solid transparent;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow:0 6px 14px rgba(0,0,0,.06);
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+/* Primary */
+.btn.primary{
+  background:#2b7a78;
+  color:white;
+}
+
+/* Secondary */
+.btn.secondary{
+  background:#ff7b54;
+  color:white;
+}
+
+/* Outline */
+.btn.outline{
+  background:transparent;
+  color:#2b7a78;
+  border-color:#2b7a78;
+}
+
+/* hover: grow slightly */
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(0,0,0,.09);
+}
+
+/* active: press */
+.btn:active{
+  transform:translateY(0) scale(.98);
+  box-shadow:0 6px 12px rgba(0,0,0,.06);
+}
+
+/* focus for keyboard users */
+.btn:focus{
+  outline:3px solid rgba(43,122,120,.16);
+}
+
+/* disabled */
+.btn[disabled], .btn:disabled{
+  opacity:.45;
+  cursor:not-allowed;
+  transform:none;
+  box-shadow:none;
+}
+
+/* show :disabled pseudo-class and :focus clearly */

@@ -1,0 +1,25 @@
+/* q8.css - Demonstrate content-box vs border-box */
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#fff;padding:2rem;}
+.compare{max-width:900px;margin:0 auto;text-align:center;}
+.boxes{display:flex;gap:1rem;justify-content:center;align-items:flex-start;flex-wrap:wrap;margin-top:1rem;}
+
+/* both boxes visually same declared width but different box-sizing */
+.box{
+  width:300px;
+  padding:20px;
+  border:8px solid #2b7a78;
+  border-radius:8px;
+}
+
+.box .inner{
+  background:#f1f8f8;padding:8px;border-radius:4px;
+}
+
+/* default uses content-box (browser default) */
+.default{ box-sizing:content-box; background:#fff7f2; }
+
+/* explicit border-box example */
+.border-box{ box-sizing:border-box; background:#f6fff9; }
+
+/* explanation text */
+.explain{max-width:700px;margin:1rem auto;color:#444;}

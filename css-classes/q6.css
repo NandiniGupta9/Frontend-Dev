@@ -1,0 +1,48 @@
+/* q6.css - Three animations using @keyframes */
+*{box-sizing:border-box;}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#f0f4f8;height:100vh;}
+.center{display:flex;align-items:center;justify-content:center;flex-direction:column;height:100vh;}
+.animations{display:flex;gap:1.25rem;align-items:center;justify-content:center;}
+
+/* moving box */
+.box{
+  width:90px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#77aaff;color:white;
+  animation: slide 2s ease-in-out infinite alternate;
+  animation-delay:0s;
+}
+
+/* bouncing ball */
+.ball{
+  width:60px;height:60px;border-radius:50%;
+  background:#ff7b54;
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
+  animation: bounce 1.2s ease-in-out infinite;
+  animation-delay:.1s;
+}
+
+/* color-changing text */
+.rainbow{
+  padding:.6rem 1rem;border-radius:8px;font-weight:700;
+  animation: colorchange 3s ease-in-out infinite alternate;
+  animation-delay:.25s;
+}
+
+/* keyframes */
+@keyframes slide{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(120px); }
+}
+
+@keyframes bounce{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-40px); }
+  100%{ transform:translateY(0); }
+}
+
+@keyframes colorchange{
+  0%{ background:#7dd3fc; color:#004e64; }
+  50%{ background:#ffd6a5; color:#6a3a00; }
+  100%{ background:#e9d5ff; color:#3b0b4a; }
+}
+
+/* ensure centered and smooth timing with ease-in-out as required */

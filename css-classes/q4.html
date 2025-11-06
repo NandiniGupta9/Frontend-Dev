@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Selectors Practice</title>
+  <link rel="stylesheet" href="q4.css">
+</head>
+<body>
+  <header><h1>CSS Selector Types</h1></header>
+  <main>
+    <section class="content">
+      <h2>Element selector (p)</h2>
+      <p>This paragraph is styled using an element selector.</p>
+
+      <h2>Class selector (.highlight)</h2>
+      <p class="highlight">This uses a class selector.</p>
+
+      <h2>ID selector (#unique)</h2>
+      <p id="unique">This uses an ID selector.</p>
+
+      <h2>Attribute selector ([data-role])</h2>
+      <p data-role="note">This paragraph has an attribute and is targeted with [data-role].</p>
+
+      <h2>Combinators</h2>
+      <div class="wrap">
+        <p>First paragraph</p>
+        <p class="adjacent">Second paragraph (adjacent sibling +)</p>
+        <span>Inline span</span>
+        <p class="sibling">Third paragraph (general sibling ~)</p>
+      </div>
+
+      <h2>Descendant selector</h2>
+      <div class="container">
+        <article>
+          <p>Targeted by .container article p (descendant)</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>Footer — demonstrates page structure</footer>
+</body>
+</html>

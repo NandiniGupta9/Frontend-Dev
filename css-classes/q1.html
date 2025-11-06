@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pseudo-Classes Demo</title>
+  <link rel="stylesheet" href="q1.css">
+</head>
+<body>
+  <header><h1>Pseudo-Classes: :hover, :focus, :active, :nth-child()</h1></header>
+  <main>
+    <section class="examples">
+      <article class="example">
+        <h2>Links — :hover</h2>
+        <p><a href="#">Hover over this link</a></p>
+        <p class="note">:hover changes color on mouse-over.</p>
+      </article>
+
+      <article class="example">
+        <h2>Button — :active &amp; :focus</h2>
+        <p><button>Click or focus me</button></p>
+        <p class="note">:active while pressing, :focus with keyboard/tab.</p>
+      </article>
+
+      <article class="example">
+        <h2>List — :nth-child()</h2>
+        <ul class="demo-list">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+        <p class="note">:nth-child(odd) and :nth-child(3) highlighted.</p>
+      </article>
+    </section>
+  </main>
+  <footer>Instructions: Use tab to focus the button; hover and click to see states.</footer>
+</body>
+</html>

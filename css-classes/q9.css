@@ -1,0 +1,26 @@
+/* q9.css - Combine pseudo-classes, transitions, transforms */
+*{box-sizing:border-box;}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#f6f8fa;padding:2rem;text-align:center;}
+.examples{display:flex;gap:1rem;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:1rem;}
+
+.example{
+  padding:.6rem 1rem;border-radius:10px;border:2px solid transparent;
+  transition:transform .2s ease, background .2s ease, box-shadow .2s ease;
+  cursor:pointer;
+}
+
+/* variant styles */
+.example{ background:#2b7a78;color:#fff; }
+.example.alt{ background:#ff7b54; }
+.example.ghost{ background:transparent; border-color:#2b7a78; color:#2b7a78; }
+
+/* hover: grow slightly and change color */
+.example:hover{ transform:scale(1.05); box-shadow:0 12px 30px rgba(0,0,0,.12); }
+
+/* active: shrink */
+.example:active{ transform:scale(.97); }
+
+/* focus: keyboard outline */
+.example:focus{ outline:3px solid rgba(43,122,120,.14); }
+
+/* combined transition is smooth and visually balanced */

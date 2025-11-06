@@ -1,0 +1,55 @@
+/* q4.css - Demonstrating selector types and combinators */
+
+/* Element selector: styles all <p> elements */
+p{
+  line-height:1.5;
+  margin:.5rem 0;
+  color:#222;
+}
+
+/* Class selector: .highlight */
+.highlight{
+  background: #fffbcc;
+  padding:.4rem;
+  border-left:4px solid #ffcc00;
+}
+
+/* ID selector: #unique */
+#unique{
+  border:1px dashed #77aaff;
+  padding:.4rem;
+}
+
+/* Attribute selector: [data-role] */
+[data-role="note"]{
+  font-style:italic;
+  color:#555;
+}
+
+/* Child combinator (>) - direct children of .wrap which are paragraphs inside it (not used here but example) */
+/* .wrap > p { ... } */
+
+/* Adjacent sibling (+) - targets a paragraph immediately after another element */
+.wrap p + p.adjacent{
+  border-top:2px solid #ddd;
+  padding-top:.3rem;
+}
+
+/* General sibling (~) - any following sibling in same parent */
+.wrap span ~ p.sibling{
+  color:#b03a2e;
+  font-weight:600;
+}
+
+/* Descendant selector */
+.container article p{
+  background:#eef6ff;
+  padding:.4rem;
+  border-radius:6px;
+}
+
+/* layout & spacing for neat appearance */
+body{ margin:0; font-family:system-ui,Segoe UI,Roboto,Arial; background:#fffaf6; }
+header, footer{ text-align:center; padding:1rem; background:white; box-shadow:0 1px 6px rgba(0,0,0,.04); }
+main{ padding:1rem; }
+.content{ max-width:800px; margin:0 auto; padding:1rem; }
