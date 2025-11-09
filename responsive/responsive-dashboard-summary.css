@@ -1,0 +1,28 @@
+body { margin: 0; font-family: Arial, sans-serif; }
+header, footer {
+  background: #333; color: white; text-align: center; padding: 1rem;
+}
+.dashboard {
+  display: grid; grid-template-columns: 200px 1fr;
+  min-height: 80vh; animation: fade 1s ease;
+}
+aside {
+  background: #444; color: white; padding: 1rem;
+}
+main {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem; padding: 1rem;
+}
+.card {
+  background: #e0f7fa; padding: 2rem; border-radius: 8px;
+  text-align: center; transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 750px) {
+  .dashboard { grid-template-columns: 1fr; }
+  aside { text-align: center; }
+}

@@ -1,0 +1,23 @@
+body { margin: 0; font-family: Arial; }
+header, footer { padding: 1rem; background: #333; color: white; text-align: center; }
+header {
+  display: flex; justify-content: space-between; align-items: center;
+}
+nav a {
+  margin: 0 10px; color: white; text-decoration: none; transition: 0.3s;
+}
+nav a:hover { color: gold; }
+
+main {
+  display: flex; justify-content: space-around; flex-wrap: wrap; padding: 2rem;
+}
+.box {
+  flex: 1 1 30%;
+  margin: 1rem; background: lightblue; padding: 2rem;
+  text-align: center; transition: transform 0.3s ease;
+}
+.box:hover { transform: scale(1.05); }
+
+@media (max-width: 750px) {
+  main { flex-direction: column; align-items: center; }
+}

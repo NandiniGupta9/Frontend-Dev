@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+img {
+  width: 100%;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+figure:nth-child(1) img { filter: blur(3px); }
+figure:nth-child(2) img { filter: grayscale(1); }
+figure:nth-child(3) img { filter: sepia(1); }
+figure:nth-child(4) img { filter: brightness(0.7); }
+figure:nth-child(5) img { filter: contrast(1.5); }
+figure:nth-child(6) img { filter: hue-rotate(120deg); }
+
+img:hover { filter: none; transform: scale(1.05); }
+
+figcaption {
+  text-align: center;
+  margin-top: .5rem;
+}
+
+@media (max-width: 600px) {
+  .gallery { grid-template-columns: 1fr; }
+}
