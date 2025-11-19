@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Student Registration</h2>
+
+<form id="studentForm">
+  <input type="text" id="name" placeholder="Name"><br>
+  <input type="text" id="email" placeholder="Email"><br>
+  <input type="text" id="phone" placeholder="Phone"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+  <button type="submit">Submit</button>
+</form>
+
+<div id="msg"></div>
+
+<script>
+const form = document.getElementById("studentForm");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name");
+  let email = document.getElementById("email");
+  let phone = document.getElementById("phone");
+  let pass = document.getElementById("password");
+
+  let nameReg = /^[A-Za-z ]+$/;
+  let emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let phoneReg = /^\d{10}$/;
+  let passReg = /^(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*!]).{6,}$/;
+
+  validateField(name, nameReg);
+  validateField(email, emailReg);
+  validateField(phone, phoneReg);
+  validateField(pass, passReg);
+});
+
+function validateField(field, regex) {
+  if (!regex.test(field.value)) {
+    field.style.border = "2px solid red";
+  } else {
+    field.style.border = "2px solid green";
+  }
+}
+</script>
+</body>
+</html>

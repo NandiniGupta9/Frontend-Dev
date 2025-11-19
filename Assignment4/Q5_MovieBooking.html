@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="movieForm">
+  <input type="text" id="name" placeholder="Name"><br>
+  <input type="text" id="email" placeholder="Email"><br>
+  <input type="number" id="seats" placeholder="Seats (1-10)"><br>
+  <button type="submit">Book Ticket</button>
+</form>
+
+<div id="ticket"></div>
+
+<script>
+document.getElementById("movieForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let seats = Number(document.getElementById("seats").value);
+
+  let nameReg = /^[A-Za-z ]+$/;
+  let emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!nameReg.test(name)) return alert("Invalid Name");
+  if (!emailReg.test(email)) return alert("Invalid Email");
+  if (seats < 1 || seats > 10) return alert("Seats must be 1–10");
+
+  let ticket = { name, email, seats };
+
+  document.getElementById("ticket").innerHTML =
+    `<h3>Booking Confirmed</h3>
+     Name: ${ticket.name}<br>
+     Email: ${ticket.email}<br>
+     Seats: ${ticket.seats}`;
+});
+</script>
+</body>
+</html>

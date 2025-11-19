@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="formArea"></div>
+<button id="submitBtn">Submit</button>
+
+<script>
+class FormBuilder {
+  constructor(fields) {
+    this.fields = fields;
+  }
+
+  renderForm() {
+    let html = "";
+    this.fields.forEach(f => {
+      html += `<label>${f.label}</label><br>
+               <input type="${f.type}" id="${f.label}"><br><br>`;
+    });
+    document.getElementById("formArea").innerHTML = html;
+  }
+
+  getFormData() {
+    let data = {};
+    this.fields.forEach(f => {
+      data[f.label] = document.getElementById(f.label).value;
+    });
+    return data;
+  }
+}
+
+const fields = [
+  { type: "text", label: "Username" },
+  { type: "email", label: "Email" }
+];
+
+const form = new FormBuilder(fields);
+form.renderForm();
+
+document.getElementById("submitBtn").onclick = () => {
+  console.log(form.getFormData());
+};
+</script>
+</body>
+</html>
