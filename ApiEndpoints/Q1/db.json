@@ -1,0 +1,9 @@
+{
+  "products": [
+    { "id": 1, "name": "Laptop", "price": 45000, "img": "https://picsum.photos/200?1" },
+    { "id": 2, "name": "Mobile", "price": 15000, "img": "https://picsum.photos/200?2" },
+    { "id": 3, "name": "Headphone", "price": 2000, "img": "https://picsum.photos/200?3" },
+    { "id": 4, "name": "Keyboard", "price": 900, "img": "https://picsum.photos/200?4" },
+    { "id": 5, "name": "Smartwatch", "price": 3000, "img": "https://picsum.photos/200?5" }
+  ]
+}

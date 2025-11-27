@@ -1,0 +1,9 @@
+{
+  "users": [
+    { "id": 1, "email": "a@gmail.com", "pass": "123456" },
+    { "id": 2, "email": "b@gmail.com", "pass": "123456" },
+    { "id": 3, "email": "c@gmail.com", "pass": "123456" },
+    { "id": 4, "email": "d@gmail.com", "pass": "123456" },
+    { "id": 5, "email": "e@gmail.com", "pass": "123456" }
+  ]
+}
