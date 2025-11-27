@@ -1,0 +1,53 @@
+/* Reset */
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Buttons */
+button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Light theme */
+body[data-theme="light"] {
+  background: #ffffff;
+  color: #222;
+}
+body[data-theme="light"] button {
+  background: #e5e5e5;
+  color: #222;
+}
+
+/* Dark theme */
+body[data-theme="dark"] {
+  background: #181818;
+  color: #f0f0f0;
+}
+body[data-theme="dark"] button {
+  background: #444;
+  color: #f0f0f0;
+}
+
+/* Blue theme */
+body[data-theme="blue"] {
+  background: #1e3a8a;
+  color: #f8f8f8;
+}
+body[data-theme="blue"] button {
+  background: #60a5fa;
+  color: #fff;
+}

@@ -1,0 +1,48 @@
+/* Gallery grid styling */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 600px;
+  margin: 40px auto;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Background */
+#modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+#modal .content {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#modal img {
+  max-width: 650px;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+/* Hidden helper class */
+.hidden {
+  display: none;
+}

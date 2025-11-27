@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 60px;
+}
+
+/* Dropdown button */
+#dropBtn {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background: white;
+}
+
+/* Options container */
+#options {
+  margin-top: 8px;
+  list-style: none;
+  padding: 0;
+  width: 140px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+}
+
+#options li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#options li:hover {
+  background: #e3e3e3;
+}
+
+.hidden {
+  display: none;
+}

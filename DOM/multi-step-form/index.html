@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+  <div class="step" data-step="1">
+    <input id="name" placeholder="Name">
+    <button id="next1">Next</button>
+  </div>
+
+  <div class="step hidden" data-step="2">
+    <input id="email" placeholder="Email">
+    <button id="back1">Back</button>
+    <button id="next2">Next</button>
+  </div>
+
+  <div class="step hidden" data-step="3">
+    <input id="password" type="password" placeholder="Password">
+    <button id="back2">Back</button>
+    <button id="finish">Finish</button>
+  </div>
+
+  <h3 id="summary"></h3>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
